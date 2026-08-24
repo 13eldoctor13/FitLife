@@ -10,7 +10,6 @@ if len(user_name) > 0:
     print(f'Здравствуй {user_name}!')
 else:
     print('Введите имя')
-    user_name = input('Как Вас зовут? ').strip()
 
 user_age = input('Сколько Вам лет? ').strip()
 
@@ -19,7 +18,6 @@ if len(user_age) > 0:
     print('Прекрасный возраст для заботы о здоровье!')
 else:
     print('Введите Ваш возраст')
-    user_age = input('Сколько Вам лет? ').strip()
 
 # 2. Сбор данных
 # TODO: Запроси вес (в кг) и сохрани в user_weight (тип float)
@@ -30,17 +28,15 @@ user_weight = input('Сколько Вы весите?(в кг.) ').strip()
 if len(user_weight) > 0:
     weight_input = float(user_weight)
 else:
-    print('Проверте правильность ввода (в кг.)')
-    user_weight = input('Сколько Вы весите?(в кг.) ').strip()
+    print('Проверьте правильность ввода (в кг.)')
 
 user_height = input('Ваш рост?(в метрах) ').strip()
-
 if len(user_height) > 0:
     height_input = float(user_height)
     if 0 < height_input <= 3:
         height_input = float(user_height)
     else:
-        print('Проверте правильность ввода(Пример: 1.83)')
+        print('Проверьте правильность ввода(Пример: 1.83)')
         user_height = input('Ваш рост?(в метрах) ').strip()
 else:
     user_height = input('Ваш рост?(в метрах) ')
