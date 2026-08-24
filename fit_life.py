@@ -113,9 +113,9 @@ def get_year_word(user_age):
     else:
         return 'лет'
 
-
+age_print = (f'В {age_input} {get_year_word(age_input)}:')
 print(f'Привет, {user_name}!')
-print(f'В {age_input} {get_year_word(age_input)}:')
+print(age_print)
 print(f'Твой ИМТ: {round(bmi, 1)}')
 print(f'Рекомендуемая норма воды: {water_needed} л.')
 print("Расчет окончен. Будьте здоровы!")
