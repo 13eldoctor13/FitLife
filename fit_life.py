@@ -68,7 +68,7 @@ def interpret_child_bmi():
         print('Нормальный вес')
 
 
-bmi = user_weight / (user_height ** 2)
+bmi = weight_input / (height_input ** 2)
 
 if user_age >= 18:
     if bmi <= 18.5:
