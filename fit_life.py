@@ -27,8 +27,19 @@ user_height = float(input('Ваш рост?(в метрах) '))
 # TODO: Рассчитай bmi (Индекс массы тела)
 bmi = user_weight / (user_height ** 2)
 def bmi_result():
-    pass
-
+    if bmi <= 18.5:
+        return 'У Вас недостаточный вес'
+    elif 18.5 < bmi <= 24.9:
+        return 'У Вас нормальный вес'
+    elif 24.9 < bmi <= 29.9:
+        return 'У Вас предожирение'
+    elif 29.9 < bmi <= 34.9:
+        return 'У Вас ожирение 1ой степени'
+    elif 34.9 < bmi <= 39.9:
+        return 'У Вас ожирение 2ой степени'
+    else:
+        return 'У Вас тяжолое ожирение'    
+   
 
 # Подсчет воды: вес * 30 мл
 # TODO: Рассчитай water_neededVb
