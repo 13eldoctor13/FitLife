@@ -15,7 +15,7 @@ else:
 
 user_age = input('Сколько Вам лет? ').strip()
 
-if len(user_age) > 0:
+if user_age.isdigit():
     age_input = int(user_age)
     print('Прекрасный возраст для заботы о здоровье!')
 else:
