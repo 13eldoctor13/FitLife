@@ -99,23 +99,8 @@ water_needed = (weight_input * ml_per_kg) / water_l
 # 4. Вывод красивого результата
 # TODO: Используй f-строку, чтобы вывести приветствие, например: "Привет, Иван"
 # TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
-
-
-def get_year_word(user_age):
-    """Вывод правильного окончания для возраста."""
-    if user_age % 100 in [11, 12, 13, 14]:
-        return 'лет'
-    age = user_age % 10
-    if age == 1:
-        return 'год'
-    elif age in [2, 3, 4]:
-        return 'года'
-    else:
-        return 'лет'
-
-age_print = (f'В {age_input} {get_year_word(age_input)}:')
 print(f'Привет, {user_name}!')
-print(age_print)
+print(f'В {age_input}')
 print(f'Твой ИМТ: {round(bmi, 1)}')
 print(f'Рекомендуемая норма воды: {water_needed} л.')
 print("Расчет окончен. Будьте здоровы!")
