@@ -5,28 +5,31 @@
 # TODO: Спроси у пользователя имя и сохрани в переменную user_name
 # TODO: Спроси возраст и сохрани в user_age (не забудь преобразовать в число)
 print('Вас приветствует Fit Life!')
-user_name = input('Как Вас зовут? ')
-user_age = int(input('Сколько Вам лет? '))
-def age_compare():
-    pass
+user_name = input('Как Вас зовут? ').strip()
+if len(user_name) > 0:
+    print(f'Здравствуй {user_name}!')
+else:
+    print('Введите имя')
+    user_name = input('Как Вас зовут? ').strip()
 
+user_age = input('Сколько Вам лет? ')
+if len(user_age) > 0:
+    user_input = int(user_age)
+    print('Прекрасный возраст!')
+else:
+    print('Введите Ваш возраст')
+    user_age = input('Сколько Вам лет? ')
 
 # 2. Сбор данных
-def height_compare():
-    pass
-
-
 # TODO: Запроси вес (в кг) и сохрани в user_weight (тип float)
 # TODO: Запроси рост (в метрах) и сохрани в user_height (тип float)
 user_weight = float(input('Сколько Вы весите?(в кг.) '))
 user_height = float(input('Ваш рост?(в метрах) '))
-
-    
 # 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
 # Формула ИМТ: вес разделить на (рост в квадрате)
 # TODO: Рассчитай bmi (Индекс массы тела)
 bmi = user_weight / (user_height ** 2)
-def bmi_result():
+def bmi_result(bmi):
     if bmi <= 18.5:
         return 'У Вас недостаточный вес'
     elif 18.5 < bmi <= 24.9:
@@ -38,8 +41,7 @@ def bmi_result():
     elif 34.9 < bmi <= 39.9:
         return 'У Вас ожирение 2ой степени'
     else:
-        return 'У Вас тяжолое ожирение'    
-   
+        return 'У Вас тяжолое ожирение'
 
 # Подсчет воды: вес * 30 мл
 # TODO: Рассчитай water_neededVb
