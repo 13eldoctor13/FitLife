@@ -48,7 +48,7 @@ else:
 # Код заимствован и адаптирован с lit-baby.ru; DokPort.com; mirvracha.ru
 
 
-def interpret_child_bmi():
+def interpret_child_bmi(age_input):
     """
     Упрощенная интерпретация ИМТ для детей и подростков (10-16 лет).
     В реальной медицине используются точные таблицы ВОЗ с шагом в 1 месяц.
@@ -104,14 +104,14 @@ water_needed = (weight_input * ml_per_kg) / water_l
 def get_year_word(user_age):
     """Вывод правильного окончания для возраста."""
     if user_age % 100 in [11, 12, 13, 14]:
-        print('лет')
+        return 'лет'
     age = user_age % 10
     if age == 1:
-        print('год')
+        return 'год'
     elif age in [2, 3, 4]:
-        print('года')
+        return 'года'
     else:
-        print('лет')
+        return 'лет'
 
 
 print(f'Привет, {user_name}!')
