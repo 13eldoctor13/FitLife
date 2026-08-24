@@ -27,21 +27,21 @@ else:
 
 user_weight = input('Сколько Вы весите?(в кг.) ').strip()
 
-if len(user_weight) > 0:
+if user_weight.replace('.', '', 1).isdigit():
     weight_input = float(user_weight)
 else:
-    print('Проверьте правильность ввода (в кг.)')
+    print('Проверьте правильность ввода (55.5 кг.)')
 
 user_height = input('Ваш рост?(в метрах) ').strip()
-if len(user_height) > 0:
+
+if user_height.replace('.', '', 1).isdigit():
     height_input = float(user_height)
-    if 0 < height_input <= 3:
+    if 0.5 < height_input <= 3:
         height_input = float(user_height)
     else:
         print('Проверьте правильность ввода(Пример: 1.83)')
-        user_height = input('Ваш рост?(в метрах) ').strip()
 else:
-    user_height = input('Ваш рост?(в метрах) ')
+    print('Проверьте правильность ввода(Пример: 1.83)')
 # 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
 # Формула ИМТ: вес разделить на (рост в квадрате)
 # TODO: Рассчитай bmi (Индекс массы тела)
