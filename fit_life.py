@@ -89,7 +89,7 @@ else:
 
 # Подсчет воды: вес * 30 мл
 # TODO: Рассчитай water_neededVb
-water_needed = (user_weight * 30) / 1000
+water_needed = (weight_input * 30) / 1000
 
 # 4. Вывод красивого результата
 # TODO: Используй f-строку, чтобы вывести приветствие, например: "Привет, Иван"
@@ -99,14 +99,14 @@ water_needed = (user_weight * 30) / 1000
 def get_year_word(user_age):
     """Вывод правильного окончания для возраста."""
     if user_age % 100 in [11, 12, 13, 14]:
-        return 'лет'
+        print('лет')
     age = user_age % 10
     if age == 1:
-        return 'год'
+        print('год')
     elif age in [2, 3, 4]:
-        return 'года'
+        print('года')
     else:
-        return 'лет'
+        print('лет')
 
 
 print(f'Привет, {user_name}!')
