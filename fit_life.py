@@ -3,7 +3,9 @@
 # TODO: Спроси у пользователя имя и сохрани в переменную user_name
 # TODO: Спроси возраст и сохрани в user_age (не забудь преобразовать в число)
 print('Вас приветствует Fit Life!')
+
 user_name = input('Как Вас зовут? ').strip()
+
 if len(user_name) > 0:
     print(f'Здравствуй {user_name}!')
 else:
@@ -11,6 +13,7 @@ else:
     user_name = input('Как Вас зовут? ').strip()
 
 user_age = input('Сколько Вам лет? ').strip()
+
 if len(user_age) > 0:
     age_input = int(user_age)
     print('Прекрасный возраст для заботы о здоровье!')
@@ -21,13 +24,17 @@ else:
 # 2. Сбор данных
 # TODO: Запроси вес (в кг) и сохрани в user_weight (тип float)
 # TODO: Запроси рост (в метрах) и сохрани в user_height (тип float)
+
 user_weight = input('Сколько Вы весите?(в кг.) ').strip()
+
 if len(user_weight) > 0:
     weight_input = float(user_weight)
 else:
     print('Проверте правильность ввода (в кг.)')
     user_weight = input('Сколько Вы весите?(в кг.) ').strip()
+
 user_height = input('Ваш рост?(в метрах) ').strip()
+
 if len(user_height) > 0:
     height_input = float(user_height)
     if 0 < height_input <= 3:
