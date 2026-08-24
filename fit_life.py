@@ -63,7 +63,7 @@ def interpret_child_bmi():
         18: (18.5, 25.0)  # Границы для переходного возраста
     }
     # Находим ближайший по возрасту порог для сравнения
-    closest_age = min(percentile_grid.keys(), key=lambda x: abs(x - user_age))
+    closest_age = min(percentile_grid.keys(), key=lambda x: abs(x - age_input))
     weight_limit, obesity_limit = percentile_grid[closest_age]
     if bmi < weight_limit:
         print('Дефицит массы(норма для {closest_age} лет: > {weight_limit})')
@@ -116,6 +116,6 @@ def get_year_word(user_age):
 
 print(f'Привет, {user_name}!')
 print(f'В {user_age} {get_year_word(user_age)}:')
-print(f'Твой ИМТ: {round(bmi(), 1)}')
+print(f'Твой ИМТ: {round(bmi, 1)}')
 print(f'Рекомендуемая норма воды: {water_needed} л.')
 print("Расчет окончен. Будьте здоровы!")
