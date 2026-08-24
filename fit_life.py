@@ -70,7 +70,7 @@ def interpret_child_bmi():
 
 bmi = weight_input / (height_input ** 2)
 
-if user_age >= 18:
+if age_input >= 18:
     if bmi <= 18.5:
         print('У Вас недостаточный вес')
     elif 18.5 < bmi <= 24.9:
