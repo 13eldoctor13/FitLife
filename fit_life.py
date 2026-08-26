@@ -5,13 +5,13 @@ WATER_L = 1000
 
 
 print('Вас приветствует Fit Life!')
-
-user_name = input('Как Вас зовут? ').strip()
-
-if len(user_name) > 0:
+while True:
+    user_name = input('Как Вас зовут? ').strip()
+if user_name:
     print(f'Здравствуй {user_name}!')
+    break
 else:
-    print('Как Вас зовут?')
+    print('Пожалуйста введите имя?')
 
 try:
     user_age = int(input('Сколько Вам лет? ').strip())
