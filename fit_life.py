@@ -7,8 +7,8 @@ WATER_L = 1000
 print('Вас приветствует Fit Life!')
 while True:
     user_name = input('Как Вас зовут? ').strip()
-if user_name:
-    print(f'Здравствуй {user_name}!')
+    if user_name:
+        print(f'Здравствуй {user_name}!')
     break
 else:
     print('Пожалуйста введите имя?')
